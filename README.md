@@ -27,8 +27,9 @@ Open any fetch request and grab cookie from headers.
 ![Cookie grab claude AI](https://github.com/anujpaude1/ai-api/blob/main/assets/claude-cookie.png)
 
 ### Set Cookie in .env
+```bash
 claudeCookie = "paste your cookie here"
-
+```
 ## Start Server
 ```bash
 uvicorn main:app --reload
