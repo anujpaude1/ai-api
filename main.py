@@ -11,13 +11,20 @@ app = FastAPI()
 
 # Load Claude cookie from environment variables
 claudeCookie = os.getenv("claudeCookie")
-claude = Client(claudeCookie)
+try:
+    claude = Client(claudeCookie)
+except Exception as e:
+    claude=None
 
 # Define route for sending message
 @app.post('/claude/send-message')
 async def send_message(request: Request):
     # Get the conversation IDs
+    if claude==None:
+        return {"error":"Cookie Expired or not set"}
+    
     conversationIDs = claude.list_all_conversations()
+    
     lastestCID = conversationIDs[-1]["uuid"]
 
     # Get the prompt from request

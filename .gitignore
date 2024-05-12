@@ -93,6 +93,7 @@ celerybeat-schedule
 
 # Environments
 gg
+.env
 .venv
 env/
 venv/

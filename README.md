@@ -1,6 +1,7 @@
 # AI Python Client (Cookie Based, No API key required)
 Claude ✅
 Gemini ❌ (Todo)
+
 **This is unofficial package, just for educational purpose. Don't use it commercially.**
 
 This Python client provides an interface to interact with the Claude AI API, allowing you to perform various actions such as sending messages, listing conversations, uploading attachments, and more.
