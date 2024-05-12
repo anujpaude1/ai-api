@@ -1,3 +1,5 @@
 curl_cffi
 httpx
 python-dotenv
+fastapi 
+uvicorn
