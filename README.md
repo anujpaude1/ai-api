@@ -36,3 +36,11 @@ claudeCookie = "paste your cookie here"
 ```bash
 uvicorn main:app --reload
 ```
+## API Endpoints
+``` bash
+URL : http://127.0.0.1:8000/claude/send-message
+BODY: 
+{
+    "prompt":"How much water should I drink each day ?"
+}
+```
