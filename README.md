@@ -32,6 +32,12 @@ Open any fetch request and grab cookie from headers.
 ```bash
 claudeCookie = "paste your cookie here"
 ```
+## Set Cookie for Gemini
+Download Cookie for gemini website and you are good to go
+```
+https://chromewebstore.google.com/detail/exportthiscookie/dannllckdimllhkiplchkcaoheibealk?hl=en
+```
+
 ## Start Server
 ```bash
 uvicorn main:app --reload
@@ -39,6 +45,11 @@ uvicorn main:app --reload
 ## API Endpoints
 ``` bash
 URL : http://127.0.0.1:8000/claude/send-message
+BODY: 
+{
+    "prompt":"How much water should I drink each day ?"
+}
+URL : http://127.0.0.1:8000/gemini/send-message
 BODY: 
 {
     "prompt":"How much water should I drink each day ?"
