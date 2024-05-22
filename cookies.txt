@@ -1,0 +1,2 @@
+#this is cookie file exported by ExportThisCookie extension - for GEMINI
+you can also manually add cookie, consult https://github.com/dsdanielpark/Gemini-API for full detail

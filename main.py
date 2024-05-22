@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, Request, WebSocket
 from aiModels.claude import Client
 from dotenv import load_dotenv
 import os
+from aiModels.geminiAI import client
 
 # Load environment variables from .env file
 load_dotenv()
@@ -34,6 +35,21 @@ async def send_message(request: Request):
     # Send message to Claude and get the response
     response = claude.send_message(prompt, lastestCID)
 
+    return response
+
+# Define route for sending message
+@app.post('/gemini/send-message')
+async def send_message(request: Request):
+    # Get the conversation IDs
+    if client==None:
+        return {"error":"Cookie Expired or not set"}
+    
+    # Get the prompt from request
+    data = await request.json()
+    prompt = data.get('prompt')
+
+    # Send message to Claude and get the response
+    response = client.generate_content(prompt)
     return response
 
 @app.post("/claude/delete-conversation")

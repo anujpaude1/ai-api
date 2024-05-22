@@ -3,3 +3,4 @@ httpx
 python-dotenv
 fastapi 
 uvicorn
+git+https://github.com/dsdanielpark/Gemini-API.git
